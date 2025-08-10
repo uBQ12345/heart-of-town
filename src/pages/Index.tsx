@@ -4,59 +4,9 @@ import { PostCard, type Post } from "@/components/PostCard";
 import CommunityInsights from "@/components/CommunityInsights";
 import MapView from "@/components/MapView/MapView";
 import { useEffect, useMemo, useState } from "react";
+import { samplePosts } from "@/data/samplePosts";
 
-const samplePosts: Post[] = [
-  {
-    id: "1",
-    type: "Events",
-    title: "Neighborhood Clean-up Day",
-    description: "Join us this Saturday to keep our streets spotless. Supplies provided!",
-    location: "Maple Park",
-    time: "Sat 10:00 AM",
-    createdAt: new Date().toISOString(),
-    coordinates: [-73.985664, 40.748514],
-  },
-  {
-    id: "2",
-    type: "Issues",
-    title: "Pothole on 3rd & Pine",
-    description: "Large pothole causing traffic. Please report to city services.",
-    location: "3rd & Pine",
-    time: "Today 8:15 AM",
-    createdAt: new Date(Date.now() - 86400000).toISOString(),
-    coordinates: [-73.99, 40.74],
-  },
-  {
-    id: "3",
-    type: "Jobs",
-    title: "Part-time Barista Needed",
-    description: "Morning shifts at Corner Cafe. Friendly team, training available.",
-    location: "Corner Cafe",
-    time: "Open Until Filled",
-    createdAt: new Date(Date.now() - 2 * 86400000).toISOString(),
-    coordinates: [-73.975, 40.752],
-  },
-  {
-    id: "4",
-    type: "Good Deeds",
-    title: "Lost Cat Found",
-    description: "Orange tabby found near Elm St. Contact to reunite with owner.",
-    location: "Elm St",
-    time: "1h ago",
-    createdAt: new Date().toISOString(),
-    coordinates: [-73.98, 40.746],
-  },
-  {
-    id: "5",
-    type: "Donations",
-    title: "Food Drive Drop-off",
-    description: "Non-perishables accepted at the community center all week.",
-    location: "Community Center",
-    time: "All Week",
-    createdAt: new Date(Date.now() - 3 * 86400000).toISOString(),
-    coordinates: [-73.97, 40.749],
-  },
-];
+
 
 const Index = () => {
   const [search, setSearch] = useState("");

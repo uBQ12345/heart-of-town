@@ -54,6 +54,13 @@ All colors MUST be HSL.
     --gradient-primary: linear-gradient(135deg, hsl(216 85% 46%), hsl(164 70% 40%));
     --shadow-soft: 0 8px 24px hsl(216 85% 46% / 0.12);
     --shadow-glow: 0 0 30px hsl(216 85% 46% / 0.25);
+
+    /* Category colors */
+    --cat-events: 216 85% 46%;
+    --cat-issues: 0 84% 58%;
+    --cat-jobs: 266 72% 45%;
+    --cat-good: 164 70% 40%;
+    --cat-donations: 38 92% 50%;
   }
 
   .dark {
@@ -97,6 +104,13 @@ All colors MUST be HSL.
     --gradient-primary: linear-gradient(135deg, hsl(216 85% 56%), hsl(164 70% 45%));
     --shadow-soft: 0 8px 24px hsl(216 85% 46% / 0.25);
     --shadow-glow: 0 0 30px hsl(216 85% 46% / 0.35);
+
+    /* Category colors */
+    --cat-events: 216 85% 56%;
+    --cat-issues: 0 84% 60%;
+    --cat-jobs: 266 72% 58%;
+    --cat-good: 164 70% 45%;
+    --cat-donations: 38 92% 55%;
   }
 }
 
