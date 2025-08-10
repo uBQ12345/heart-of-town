@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input";
-import { HandHeart, Search, Map, User } from "lucide-react";
+import { HandHeart, Search, Map, User, Plus } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Link } from "react-router-dom";
 
 interface TopNavProps {
   search: string;
@@ -13,12 +14,12 @@ const TopNav = ({ search, onSearchChange, isMapView, onToggleView }: TopNavProps
   return (
     <header className="sticky top-0 z-40 border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container flex h-16 items-center justify-between gap-4">
-        <a href="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-md bg-gradient-primary shadow-glow grid place-items-center">
             <HandHeart className="h-4 w-4 text-primary-foreground" />
           </div>
           <span className="font-semibold">Local Hero</span>
-        </a>
+        </Link>
 
         <div className="flex-1 max-w-xl hidden md:flex items-center gap-2">
           <div className="relative w-full">
@@ -34,6 +35,10 @@ const TopNav = ({ search, onSearchChange, isMapView, onToggleView }: TopNavProps
         </div>
 
         <div className="flex items-center gap-3">
+          <Link to="/post/new" className="inline-flex items-center gap-2 rounded-md px-3 py-2 bg-primary text-primary-foreground hover:opacity-90 transition-opacity">
+            <Plus className="h-4 w-4" />
+            <span className="hidden sm:inline">New Post</span>
+          </Link>
           <button
             onClick={onToggleView}
             className="inline-flex items-center gap-2 rounded-md px-3 py-2 bg-accent text-accent-foreground hover:opacity-90 transition-opacity"
